@@ -30,11 +30,13 @@ set("n", "<M-j>", "<c-w><c-j>")
 set("n", "<M-k>", "<c-w><c-k>")
 set("n", "<M-l>", "<c-w><c-l>")
 set("n", "<M-h>", "<c-w><c-h>")
+set("n", "<M-q>", "<c-w><c-q>")
 
 set("t", "<M-j>", "<c-\\><c-n><c-w><c-j>")
 set("t", "<M-k>", "<c-\\><c-n><c-w><c-k>")
 set("t", "<M-l>", "<c-\\><c-n><c-w><c-l>")
 set("t", "<M-h>", "<c-\\><c-n><c-w><c-h>")
+set("t", "<M-q>", "<c-\\><c-n><c-w><c-q>")
 
 set("n", "<M-,>", "<c-w>5<")
 set("n", "<M-.>", "<c-w>5>")
