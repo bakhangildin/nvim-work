@@ -6,13 +6,16 @@ lspkind.init {}
 
 local cmp = require "cmp"
 
+
 cmp.setup {
-  sources = {
+  sources = cmp.config.sources({
+    { name = "nvim_lsp_signature_help" },
     { name = "nvim_lsp" },
-    { name = 'luasnip' },
+    { name = "luasnip" },
+  }, {
     { name = "buffer" },
     { name = "path" },
-  },
+  }),
   mapping = {
     ["<C-space>"] = cmp.mapping.complete {},
     ["<C-n>"] = cmp.mapping.select_next_item {},
