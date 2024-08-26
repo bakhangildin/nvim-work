@@ -11,6 +11,25 @@ local capabilities = vim.tbl_deep_extend(
 )
 
 local lspconfig = require "lspconfig"
+local configs = require "lspconfig.configs"
+local util = require "lspconfig.util"
+
+--[[
+$ go clean -modcache && go install github.com/lasorda/protobuf-language-server@latest
+]]
+configs["protobuf-language-server"] = {
+  default_config = {
+    cmd = { "protobuf-language-server" },
+    filetypes = { "proto" },
+    root_dir = util.root_pattern('.git'),
+    -- single_file_support = true,
+    settings = {
+      ["additional-proto-dirs"] = { "/usr/bin/include" },
+    },
+  },
+}
+
+lspconfig["protobuf-language-server"].setup {}
 
 local servers = {
   basedpyright = true,
